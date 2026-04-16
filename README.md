@@ -408,61 +408,54 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
 
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 1.5rem;
-                gap: 1rem;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            }
+    .hero {
+        padding: 5.5rem 1.5rem 2.5rem;
+    }
 
-            .nav-links.show {
-                display: flex;
-            }
+    .hero-content h1 {
+        font-size: 1.9rem;
+        line-height: 1.3;
+    }
 
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+    .hero-content p {
+        font-size: 0.95rem;
+    }
 
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
+    .hero-buttons {
+        justify-content: center;
+    }
 
-            .hero-stats {
-                justify-content: center;
-            }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 
-            .hero-image {
-                display: none;
-            }
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
 
-            .section-title {
-                font-size: 1.6rem;
-            }
+    .stat {
+        text-align: center;
+    }
 
-            .cta-section {
-                padding: 2rem;
-            }
+    .hero-image img {
+        max-width: 260px;
+        margin: 0 auto;
+        display: block;
+    }
 
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
+    section {
+        padding: 3rem 1.5rem;
+    }
 
-            .footer-links {
-                justify-content: center;
-            }
-        }
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+}
     </style>
 </head>
 <body>
