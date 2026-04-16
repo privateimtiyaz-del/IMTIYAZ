@@ -407,55 +407,73 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
 
     .hero {
         padding: 5rem 1.2rem 2rem;
     }
 
+    .hero-container {
+        gap: 1.5rem;
+    }
+
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         line-height: 1.3;
     }
 
     .hero-content p {
         font-size: 0.9rem;
+        margin-bottom: 1.2rem;
     }
 
     .hero-buttons {
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.5rem;
     }
 
     .btn {
         width: 100%;
-        font-size: 0.9rem;
-        padding: 0.8rem;
+        font-size: 0.85rem;
+        padding: 0.7rem;
     }
 
     .hero-stats {
         flex-direction: column;
         align-items: center;
-        gap: 0.8rem;
-        margin-top: 1.5rem;
+        gap: 0.6rem;
+        margin-top: 1.2rem;
     }
 
     .stat-number {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .hero-image img {
-        max-width: 220px;
+        max-width: 200px;
     }
 
     section {
-        padding: 2.5rem 1.2rem;
+        padding: 2.2rem 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
     }
 
     .program-card {
+        padding: 1.3rem;
+    }
+
+    .testimonial-card {
         padding: 1.5rem;
     }
 
+    .cta-section {
+        padding: 2rem 1.5rem;
+    }
+}
 }
 }
     </style>
