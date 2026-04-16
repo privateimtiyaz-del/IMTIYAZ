@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -507,7 +507,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://placehold.co/500x450/0f5c5c/ffffff?text=Ilustrasi+Belajar" alt="Belajar">
+                <img src="logo imtiyaz.png" alt="Belajar">
             </div>
         </div>
     </section>
@@ -619,9 +619,8 @@
 
     <div class="container">
         <div class="cta-section">
-            <h2>Mau coba gratis?</h2>
-            <p>Dapatkan sesi konsultasi dan uji coba gratis 30 menit</p>
-            <a href="#daftar" class="btn btn-white">Hubungi Kami →</a>
+            <h2>Untuk Informasi Lebih Lanjut</h2>
+            <a href="#daftar" class="btn btn-white">Hubungi Kami! →</a>
         </div>
     </div>
 
