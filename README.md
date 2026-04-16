@@ -119,7 +119,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 2rem;
             align-items: center;
         }
 
@@ -410,51 +410,53 @@
         @media (max-width: 768px) {
 
     .hero {
-        padding: 5.5rem 1.5rem 2.5rem;
+        padding: 5rem 1.2rem 2rem;
     }
 
     .hero-content h1 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         line-height: 1.3;
     }
 
     .hero-content p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .hero-buttons {
-        justify-content: center;
+        flex-direction: column;
+        gap: 0.6rem;
     }
 
     .btn {
         width: 100%;
-        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.8rem;
     }
 
     .hero-stats {
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+        gap: 0.8rem;
         margin-top: 1.5rem;
     }
 
-    .stat {
-        text-align: center;
+    .stat-number {
+        font-size: 1.5rem;
     }
 
     .hero-image img {
-        max-width: 260px;
-        margin: 0 auto;
-        display: block;
+        max-width: 220px;
     }
 
     section {
-        padding: 3rem 1.5rem;
+        padding: 2.5rem 1.2rem;
     }
 
-    .section-title {
-        font-size: 1.4rem;
+    .program-card {
+        padding: 1.5rem;
     }
 
+}
 }
     </style>
 </head>
