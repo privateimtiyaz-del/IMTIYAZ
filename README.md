@@ -580,7 +580,7 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
-        <img src="logo imtiyaz.png" alt="logo">
+        <img src="logo-imtiyaz.png" alt="logo">
         <div class="hero-badge">✨ Privat Quran & Akademik</div>
         <h1>Belajar Lebih Dekat, <span>Hasil Lebih Hebat</span></h1>
         <p>Bimbingan privat Quran & Akademik di Banda Aceh. Metode personal, fleksibel, dan terjangkau.</p>
