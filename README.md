@@ -12,7 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
             --primary: #0f5c5c;
             --primary-dark: #0a4545;
@@ -629,7 +629,7 @@
             <div>
                 <div class="footer-logo">IMTI<span style="color: var(--accent);">YAZ</span></div>
                 <p style="color: rgba(255,255,255,0.6);">Quranic & Academic Tutoring</p>
-                <p style="margin-top: 1rem; font-size: 0.85rem;">📍 Banda Aceh</p>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">📍 Banda Aceh & Sekitarnya </p>
             </div>
             <div class="footer-links">
                 <div>
