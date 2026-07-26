@@ -757,7 +757,7 @@
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/6287754721634" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6282280101093" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
