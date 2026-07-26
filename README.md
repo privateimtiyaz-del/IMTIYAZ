@@ -743,9 +743,9 @@
         <div class="footer-logo">IMTI<span style="color: var(--accent);">YAZ</span></div>
         <p class="footer-tagline">Quranic & Academic Tutoring · Banda Aceh</p>
         <div class="footer-contact">
-            <a href="tel:087754721634"><i class="fas fa-phone"></i> 0877 5472 1634</a>
+            <a href="tel:082280101093"><i class="fas fa-phone"></i> 0822 8010 1093</a>
             <a href="mailto:privateimtiyaz@gmail.com"><i class="fas fa-envelope"></i> privateimtiyaz@gmail.com</a>
-            <a href="https://wa.me/6287754721634" target="_blank"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+            <a href="https://wa.me/6282280101093" target="_blank"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
         </div>
         <div class="footer-links-row">
             <a href="#program">Calistung</a>
@@ -797,7 +797,7 @@
             }
 
             const message = `Halo IMTIYAZ, saya ingin mendaftar:%0A%0A*Nama:* ${encodeURIComponent(nama)}%0A*Program:* ${encodeURIComponent(program)}%0A*WhatsApp:* ${encodeURIComponent(wa)}%0A*Alamat:* ${encodeURIComponent(alamat)}%0A%0AMohon info lebih lanjut. Terima kasih.`;
-            window.open(`https://wa.me/6287754721634?text=${message}`, '_blank');
+            window.open(`https://wa.me/6282280101093?text=${message}`, '_blank');
             form.reset();
         });
 
