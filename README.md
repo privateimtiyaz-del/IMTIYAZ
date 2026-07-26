@@ -111,14 +111,14 @@
             gap: 0.25rem;
             text-decoration: none;
             color: var(--text-light);
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 500;
             transition: color 0.2s;
             flex: 1;
         }
 
         .bottom-nav a i {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .bottom-nav a.active,
@@ -253,7 +253,7 @@
             margin-top: 0.15rem;
         }
 
-        /* ===== PROGRAM CARDS ===== */
+        /* ===== PROGRAM PRICE ACCORDION ===== */
         #program {
             background: white;
         }
@@ -261,57 +261,444 @@
         .programs-grid {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.9rem;
         }
 
-        .program-card {
+        .price-item {
             background: var(--bg-light);
-            padding: 1.2rem;
-            border-radius: 20px;
+            border-radius: 18px;
             border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .price-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.85rem;
+            padding: 1rem 1.1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
         }
 
         .program-icon {
-            font-size: 2.2rem;
+            font-size: 1.6rem;
             flex-shrink: 0;
-            width: 52px;
-            height: 52px;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: white;
-            border-radius: 14px;
+            border-radius: 12px;
             box-shadow: var(--shadow-sm);
         }
 
-        .program-info {
+        .price-header-info {
             flex: 1;
         }
 
-        .program-card h3 {
-            font-size: 1rem;
-            margin-bottom: 0.2rem;
+        .price-header-info h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.1rem;
         }
 
-        .program-card p {
+        .price-header-info p {
             color: var(--text-light);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+        }
+
+        .price-arrow {
+            color: var(--primary);
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .price-item.open .price-arrow {
+            transform: rotate(180deg);
+        }
+
+        .price-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .price-item.open .price-body {
+            max-height: 1000px;
+        }
+
+        .price-body-inner {
+            padding: 0 1.1rem 1.1rem;
+        }
+
+        .price-table-scroll {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .price-table {
+            width: 100%;
+            min-width: 340px;
+            border-collapse: collapse;
+            background: white;
+            font-size: 0.78rem;
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 0.55rem 0.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            white-space: nowrap;
+        }
+
+        .price-table thead th {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            font-size: 0.72rem;
+        }
+
+        .price-table tbody th {
+            background: var(--bg-light);
+            font-weight: 700;
+            color: var(--text);
+            white-space: normal;
+        }
+
+        .price-table tbody tr:last-child td,
+        .price-table tbody tr:last-child th {
+            border-bottom: none;
+        }
+
+        .price-note {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* ===== KEUNGGULAN ===== */
+        #keunggulan {
+            background: var(--bg-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 18px;
+            padding: 1.1rem 0.9rem;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(15, 92, 92, 0.08);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .feature-card h3 {
+            font-size: 0.88rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-card p {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            line-height: 1.45;
+        }
+
+        /* ===== STATISTIK LEMBAGA ===== */
+        #statistik {
+            background: var(--primary);
+            color: white;
+        }
+
+        #statistik .section-title {
+            color: white;
+        }
+
+        #statistik .section-title span {
+            color: var(--accent);
+        }
+
+        .stats-grid-full {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem;
+        }
+
+        .stat-card-full {
+            background: rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 1.2rem 0.8rem;
+            text-align: center;
+        }
+
+        .stat-card-full .stat-icon {
+            font-size: 1.3rem;
+            color: var(--accent);
             margin-bottom: 0.4rem;
         }
 
-        .program-price {
-            font-size: 1rem;
-            font-weight: 800;
-            color: var(--primary);
+        .stat-card-full .stat-number {
+            color: white;
+            font-size: 1.6rem;
         }
 
-        .program-arrow {
-            color: var(--primary);
-            font-size: 1.2rem;
+        .stat-card-full .stat-label {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.75rem;
+        }
+
+        /* ===== PROFIL PENGAJAR ===== */
+        #pengajar {
+            background: white;
+        }
+
+        .teacher-scroll {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+            scrollbar-width: none;
+        }
+
+        .teacher-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .teacher-card {
+            background: var(--bg-light);
+            border-radius: 18px;
+            padding: 1.2rem 1rem;
+            min-width: 155px;
             flex-shrink: 0;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .teacher-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0 auto 0.7rem;
+        }
+
+        .teacher-card h3 {
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .teacher-card p {
+            font-size: 0.72rem;
+            color: var(--text-light);
+        }
+
+        /* ===== ALUR PENDAFTARAN ===== */
+        #alur {
+            background: var(--bg-light);
+        }
+
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .step-marker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-line {
+            width: 2px;
+            flex: 1;
+            background: rgba(15, 92, 92, 0.2);
+            margin: 0.25rem 0;
+        }
+
+        .step-item:last-child .step-line {
+            display: none;
+        }
+
+        .step-content {
+            padding-bottom: 1.5rem;
+        }
+
+        .step-content h3 {
+            font-size: 0.92rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .step-content p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* ===== FAQ ===== */
+        #faq {
+            background: white;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 1rem 1.1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .faq-question i {
+            color: var(--primary);
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .faq-item.open .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.1rem 1.1rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.55;
+        }
+
+        /* ===== KONTAK & LOKASI ===== */
+        #kontak {
+            background: var(--bg-light);
+        }
+
+        .kontak-card {
+            background: white;
+            border-radius: 18px;
+            border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .kontak-map {
+            width: 100%;
+            height: 180px;
+            border: none;
+            display: block;
+        }
+
+        .kontak-info {
+            padding: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .kontak-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .kontak-row .kontak-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(15, 92, 92, 0.08);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .kontak-row .kontak-label {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .kontak-row .kontak-value {
+            font-size: 0.86rem;
+            font-weight: 600;
         }
 
         /* ===== TESTIMONI ===== */
@@ -606,47 +993,406 @@
 
     <div class="section-divider"></div>
 
+    <!-- KEUNGGULAN -->
+    <section id="keunggulan">
+        <div class="container">
+            <h2 class="section-title">Kenapa Pilih <span>IMTIYAZ?</span></h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Pengajar Berpengalaman</h3>
+                    <p>Tenaga pengajar terseleksi, ahli di bidang Quran & akademik.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-house-user"></i></div>
+                    <h3>Belajar Fleksibel</h3>
+                    <p>Jadwal privat menyesuaikan waktu siswa & orang tua.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Paket bervariasi, bisa dipilih sesuai kebutuhan & budget.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Metode Personal</h3>
+                    <p>Pendekatan sabar & disesuaikan karakter tiap anak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <!-- PROGRAM -->
     <section id="program">
         <div class="container">
-            <h2 class="section-title">Program <span>Unggulan</span></h2>
+            <h2 class="section-title">Daftar Harga <span>& Paket</span></h2>
+            <p style="text-align:center; color:var(--text-light); font-size:0.8rem; margin-top:-1rem; margin-bottom:1.2rem;">Ketuk tiap kategori untuk lihat rincian paket & harga</p>
             <div class="programs-grid">
-                <a href="#daftar" class="program-card" style="text-decoration:none; color:inherit;">
-                    <div class="program-icon">📚</div>
-                    <div class="program-info">
-                        <h3>Calistung</h3>
-                        <p>Baca, tulis, hitung untuk anak usia dini</p>
-                        <div class="program-price">Rp35K / sesi</div>
+
+                <!-- 1. CALISTUNG & IQRA -->
+                <div class="price-item">
+                    <button class="price-header" onclick="togglePrice(this)">
+                        <div class="program-icon">📚</div>
+                        <div class="price-header-info">
+                            <h3>Calistung & Iqra</h3>
+                            <p>Baca, tulis, hitung & mengaji Iqra</p>
+                        </div>
+                        <i class="fas fa-chevron-down price-arrow"></i>
+                    </button>
+                    <div class="price-body">
+                        <div class="price-body-inner">
+                            <div class="price-table-scroll">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Paket</th>
+                                            <th>Calistung & Iqra<br>1 jam</th>
+                                            <th>Calistung & Iqra<br>1½ jam</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Durasi sesi</th>
+                                            <td>1–2 Murid<br>(kakak beradik)</td>
+                                            <td>3–5 Murid<br>(kelompok)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>8 Pertemuan</th>
+                                            <td>Rp 280.000 – 300.000</td>
+                                            <td>Rp 350.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>12 Pertemuan</th>
+                                            <td>Rp 420.000 – 440.000</td>
+                                            <td>Rp 510.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>16 Pertemuan</th>
+                                            <td>Rp 560.000 – 580.000</td>
+                                            <td>Rp 700.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <i class="fas fa-chevron-right program-arrow"></i>
-                </a>
-                <a href="#daftar" class="program-card" style="text-decoration:none; color:inherit;">
-                    <div class="program-icon">📿</div>
-                    <div class="program-info">
-                        <h3>Mengaji & Tahfidz</h3>
-                        <p>Tajwid, makhraj, dan hafalan Al-Qur'an</p>
-                        <div class="program-price">Rp35K – 50K / sesi</div>
+                </div>
+
+                <!-- 2. TAHFIZ & TAHSIN -->
+                <div class="price-item">
+                    <button class="price-header" onclick="togglePrice(this)">
+                        <div class="program-icon">📿</div>
+                        <div class="price-header-info">
+                            <h3>Tahfiz & Tahsin</h3>
+                            <p>Tajwid, makhraj, dan hafalan Al-Qur'an</p>
+                        </div>
+                        <i class="fas fa-chevron-down price-arrow"></i>
+                    </button>
+                    <div class="price-body">
+                        <div class="price-body-inner">
+                            <div class="price-table-scroll">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Paket</th>
+                                            <th>Tahfiz & Tahsin<br>1 jam</th>
+                                            <th>Tahfiz & Tahsin<br>1½ jam</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Durasi sesi</th>
+                                            <td>1–2 Murid<br>(kakak beradik)</td>
+                                            <td>3–5 Murid<br>(kelompok)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>8 Pertemuan</th>
+                                            <td>Rp 280.000 – 300.000</td>
+                                            <td>Rp 350.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>12 Pertemuan</th>
+                                            <td>Rp 420.000 – 440.000</td>
+                                            <td>Rp 510.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>16 Pertemuan</th>
+                                            <td>Rp 560.000 – 580.000</td>
+                                            <td>Rp 700.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <i class="fas fa-chevron-right program-arrow"></i>
-                </a>
-                <a href="#daftar" class="program-card" style="text-decoration:none; color:inherit;">
-                    <div class="program-icon">🕌</div>
-                    <div class="program-info">
-                        <h3>Bahasa Arab</h3>
-                        <p>Nahwu, sharaf, dan percakapan sehari-hari</p>
-                        <div class="program-price">Rp55K – 70K / sesi</div>
+                </div>
+
+                <!-- 3. BAHASA ARAB / INGGRIS -->
+                <div class="price-item">
+                    <button class="price-header" onclick="togglePrice(this)">
+                        <div class="program-icon">🌍</div>
+                        <div class="price-header-info">
+                            <h3>Bahasa Arab / Inggris</h3>
+                            <p>Nahwu, sharaf, speaking & grammar</p>
+                        </div>
+                        <i class="fas fa-chevron-down price-arrow"></i>
+                    </button>
+                    <div class="price-body">
+                        <div class="price-body-inner">
+                            <div class="price-table-scroll">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Paket</th>
+                                            <th>TK/SD</th>
+                                            <th>SMP</th>
+                                            <th>SMA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>4 pertemuan</th>
+                                            <td>Rp 180.000</td>
+                                            <td>Rp 220.000</td>
+                                            <td>Rp 260.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>6 pertemuan</th>
+                                            <td>Rp 270.000</td>
+                                            <td>Rp 330.000</td>
+                                            <td>Rp 390.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>8 pertemuan</th>
+                                            <td>Rp 360.000</td>
+                                            <td>Rp 440.000</td>
+                                            <td>Rp 520.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>12 pertemuan</th>
+                                            <td>Rp 540.000</td>
+                                            <td>Rp 660.000</td>
+                                            <td>Rp 700.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>16 pertemuan</th>
+                                            <td>Rp 720.000</td>
+                                            <td>Rp 880.000</td>
+                                            <td>Rp 1.000.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <i class="fas fa-chevron-right program-arrow"></i>
-                </a>
-                <a href="#daftar" class="program-card" style="text-decoration:none; color:inherit;">
-                    <div class="program-icon">🌍</div>
-                    <div class="program-info">
-                        <h3>Bahasa Inggris</h3>
-                        <p>Speaking, grammar, persiapan TOEFL</p>
-                        <div class="program-price">Rp55K – 70K / sesi</div>
+                </div>
+
+                <!-- 4. MAPEL UMUM -->
+                <div class="price-item">
+                    <button class="price-header" onclick="togglePrice(this)">
+                        <div class="program-icon">📖</div>
+                        <div class="price-header-info">
+                            <h3>Mapel Umum</h3>
+                            <p>SD, SMP, SMA — semua mata pelajaran</p>
+                        </div>
+                        <i class="fas fa-chevron-down price-arrow"></i>
+                    </button>
+                    <div class="price-body">
+                        <div class="price-body-inner">
+                            <div class="price-table-scroll">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Paket</th>
+                                            <th>SD<br>(Kelas 1-3)</th>
+                                            <th>SD<br>(Kelas 4-6)</th>
+                                            <th>SMP</th>
+                                            <th>SMA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>4 Pertemuan</th>
+                                            <td>–</td>
+                                            <td>Rp 160.000</td>
+                                            <td>Rp 180.000</td>
+                                            <td>Rp 200.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>6 Pertemuan</th>
+                                            <td>–</td>
+                                            <td>Rp 240.000</td>
+                                            <td>Rp 270.000</td>
+                                            <td>Rp 300.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>8 Pertemuan</th>
+                                            <td>Rp 280.000</td>
+                                            <td>Rp 320.000</td>
+                                            <td>Rp 360.000</td>
+                                            <td>Rp 400.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>12 Pertemuan</th>
+                                            <td>Rp 420.000</td>
+                                            <td>Rp 480.000</td>
+                                            <td>Rp 540.000</td>
+                                            <td>Rp 600.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>16 Pertemuan</th>
+                                            <td>Rp 560.000</td>
+                                            <td>Rp 640.000</td>
+                                            <td>Rp 720.000</td>
+                                            <td>Rp 800.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <i class="fas fa-chevron-right program-arrow"></i>
-                </a>
+                </div>
+
+                <!-- 5. TILAWAH -->
+                <div class="price-item">
+                    <button class="price-header" onclick="togglePrice(this)">
+                        <div class="program-icon">🕌</div>
+                        <div class="price-header-info">
+                            <h3>Tilawah</h3>
+                            <p>Seni membaca Al-Qur'an berkelompok</p>
+                        </div>
+                        <i class="fas fa-chevron-down price-arrow"></i>
+                    </button>
+                    <div class="price-body">
+                        <div class="price-body-inner">
+                            <div class="price-table-scroll">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Paket</th>
+                                            <th>Tilawah (3–5 Murid)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>8 Pertemuan</th>
+                                            <td>Rp 400.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>12 Pertemuan</th>
+                                            <td>Rp 600.000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>16 Pertemuan</th>
+                                            <td>Rp 800.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. ANAK BERKEBUTUHAN KHUSUS -->
+                <div class="price-item">
+                    <button class="price-header" onclick="togglePrice(this)">
+                        <div class="program-icon">💛</div>
+                        <div class="price-header-info">
+                            <h3>Anak Berkebutuhan Khusus</h3>
+                            <p>Pendampingan & privat khusus ABK</p>
+                        </div>
+                        <i class="fas fa-chevron-down price-arrow"></i>
+                    </button>
+                    <div class="price-body">
+                        <div class="price-body-inner">
+                            <div class="price-table-scroll">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Spesial</th>
+                                            <th>Detail</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>ABK Shadow Teacher</th>
+                                            <td>Rp 900.000 / bulan</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Privat Khusus ABK</th>
+                                            <td>Diskusi dulu nanti</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- STATISTIK LEMBAGA -->
+    <section id="statistik">
+        <div class="container">
+            <h2 class="section-title">Statistik <span>Lembaga</span></h2>
+            <div class="stats-grid-full">
+                <div class="stat-card-full">
+                    <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Siswa Aktif</div>
+                </div>
+                <div class="stat-card-full">
+                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Pengajar</div>
+                </div>
+                <div class="stat-card-full">
+                    <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Orang Tua Puas</div>
+                </div>
+                <div class="stat-card-full">
+                    <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="stat-number">Banda Aceh</div>
+                    <div class="stat-label">Area Layanan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- PROFIL PENGAJAR -->
+    <section id="pengajar">
+        <div class="container">
+            <h2 class="section-title">Profil <span>Pengajar</span></h2>
+            <div class="teacher-scroll">
+                <div class="teacher-card">
+                    <div class="teacher-avatar">UF</div>
+                    <h3>Ustadzah Fitri</h3>
+                    <p>Spesialis Tahfiz & Tahsin</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">UR</div>
+                    <h3>Ustadz Rizal</h3>
+                    <p>Spesialis Bahasa Arab</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">KD</div>
+                    <h3>Kak Dinda</h3>
+                    <p>Spesialis Calistung</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">KH</div>
+                    <h3>Kak Hafiz</h3>
+                    <p>Spesialis Mapel Umum</p>
+                </div>
             </div>
         </div>
     </section>
@@ -695,6 +1441,114 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
+    <!-- ALUR PENDAFTARAN -->
+    <section id="alur">
+        <div class="container">
+            <h2 class="section-title">Alur <span>Pendaftaran</span></h2>
+            <div class="steps-list">
+                <div class="step-item">
+                    <div class="step-marker">
+                        <div class="step-number">1</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Isi Formulir</h3>
+                        <p>Lengkapi data siswa & pilih program di form pendaftaran.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-marker">
+                        <div class="step-number">2</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Konfirmasi via WhatsApp</h3>
+                        <p>Tim IMTIYAZ menghubungi untuk konfirmasi jadwal & pengajar.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-marker">
+                        <div class="step-number">3</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Sesi Trial</h3>
+                        <p>Coba sesi konsultasi & trial gratis 30 menit sebelum mulai.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-marker">
+                        <div class="step-number">4</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Mulai Belajar</h3>
+                        <p>Siswa mulai sesi belajar privat sesuai jadwal yang disepakati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan <span>Umum</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Apakah ada sesi trial gratis?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, IMTIYAZ menyediakan sesi konsultasi dan trial gratis selama 30 menit sebelum siswa memutuskan untuk mendaftar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Bagaimana sistem pembayarannya?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pembayaran dilakukan per paket (8/12/16 pertemuan) dan bisa didiskusikan langsung dengan tim admin via WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Apakah bisa belajar berkelompok dengan saudara?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bisa. Tersedia paket kakak beradik (1-2 murid) dan paket kelompok (3-5 murid) dengan harga yang lebih hemat per anak.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Apakah tersedia program untuk Anak Berkebutuhan Khusus?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, IMTIYAZ menyediakan layanan ABK Shadow Teacher dan privat khusus ABK yang bisa didiskusikan sesuai kebutuhan anak.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Di mana lokasi bimbingan belajar?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>IMTIYAZ berlokasi di Banda Aceh dan melayani privat datang ke rumah maupun sesi di tempat, sesuai kesepakatan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <!-- CTA BANNER -->
     <div class="cta-section">
         <h2>Mau coba gratis?</h2>
@@ -738,23 +1592,61 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
+    <!-- KONTAK & LOKASI -->
+    <section id="kontak">
+        <div class="container">
+            <h2 class="section-title">Kontak <span>& Lokasi</span></h2>
+            <div class="kontak-card">
+                <iframe class="kontak-map" src="https://maps.google.com/maps?q=Banda%20Aceh&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                <div class="kontak-info">
+                    <a href="tel:082280101093" class="kontak-row">
+                        <div class="kontak-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <div class="kontak-label">Telepon</div>
+                            <div class="kontak-value">0822 8010 1093</div>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/6282280101093" target="_blank" class="kontak-row">
+                        <div class="kontak-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <div class="kontak-label">WhatsApp</div>
+                            <div class="kontak-value">Chat Sekarang</div>
+                        </div>
+                    </a>
+                    <a href="mailto:privateimtiyaz@gmail.com" class="kontak-row">
+                        <div class="kontak-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="kontak-label">Email</div>
+                            <div class="kontak-value">privateimtiyaz@gmail.com</div>
+                        </div>
+                    </a>
+                    <div class="kontak-row">
+                        <div class="kontak-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="kontak-label">Lokasi</div>
+                            <div class="kontak-value">Banda Aceh, Aceh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-logo">IMTI<span style="color: var(--accent);">YAZ</span></div>
         <p class="footer-tagline">Quranic & Academic Tutoring · Banda Aceh</p>
-        <div class="footer-contact">
-            <a href="tel:082280101093"><i class="fas fa-phone"></i> 0822 8010 1093</a>
-            <a href="mailto:privateimtiyaz@gmail.com"><i class="fas fa-envelope"></i> privateimtiyaz@gmail.com</a>
-            <a href="https://wa.me/6282280101093" target="_blank"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
-        </div>
         <div class="footer-links-row">
-            <a href="#program">Calistung</a>
-            <a href="#program">Mengaji</a>
-            <a href="#program">Bahasa Arab</a>
-            <a href="#program">Bahasa Inggris</a>
+            <a href="#program">Program</a>
+            <a href="#pengajar">Pengajar</a>
+            <a href="#faq">FAQ</a>
+            <a href="#kontak">Kontak</a>
         </div>
         <div class="footer-copy">© 2026 IMTIYAZ. All rights reserved.</div>
     </footer>
+
 
     <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/6282280101093" class="whatsapp-float" target="_blank">
@@ -779,9 +1671,33 @@
             <i class="fas fa-user-plus"></i>
             <span>Daftar</span>
         </a>
+        <a href="#kontak">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Kontak</span>
+        </a>
     </div>
 
     <script>
+        // Toggle accordion daftar harga
+        function togglePrice(headerEl) {
+            const item = headerEl.closest('.price-item');
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.price-item.open').forEach(el => el.classList.remove('open'));
+            if (!wasOpen) {
+                item.classList.add('open');
+            }
+        }
+
+        // Toggle accordion FAQ
+        function toggleFaq(questionEl) {
+            const item = questionEl.closest('.faq-item');
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            if (!wasOpen) {
+                item.classList.add('open');
+            }
+        }
+
         // Form submission → WhatsApp
         const form = document.getElementById('registerForm');
         form.addEventListener('submit', (e) => {
