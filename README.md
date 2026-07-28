@@ -1447,16 +1447,8 @@
 
                     <div class="form-section-label"><i class="fas fa-calendar-days"></i> Hari yang Diinginkan</div>
                     <div class="form-group">
-                        <div class="check-grid">
-                            <label class="check-option"><input type="checkbox" name="hari" value="Senin"> Senin</label>
-                            <label class="check-option"><input type="checkbox" name="hari" value="Selasa"> Selasa</label>
-                            <label class="check-option"><input type="checkbox" name="hari" value="Rabu"> Rabu</label>
-                            <label class="check-option"><input type="checkbox" name="hari" value="Kamis"> Kamis</label>
-                            <label class="check-option"><input type="checkbox" name="hari" value="Jumat"> Jumat</label>
-                            <label class="check-option"><input type="checkbox" name="hari" value="Sabtu"> Sabtu</label>
-                            <label class="check-option"><input type="checkbox" name="hari" value="Minggu"> Minggu</label>
-                            <label class="check-option"><input type="checkbox" name="hari" value="Fleksibel/Kapan saja"> Fleksibel/Kapan saja</label>
-                        </div>
+                        <label class="form-label" for="hariDiinginkan">Tulis hari yang diinginkan</label>
+                        <input type="text" id="hariDiinginkan" placeholder="Contoh: Senin, Rabu, Jumat / Fleksibel kapan saja" required>
                     </div>
 
                     <div class="form-group">
@@ -1605,12 +1597,12 @@
 
             const kebutuhan = Array.from(document.querySelectorAll('input[name="kebutuhan"]:checked')).map(el => el.value);
             const preferensiEl = document.querySelector('input[name="preferensi"]:checked');
-            const hari = Array.from(document.querySelectorAll('input[name="hari"]:checked')).map(el => el.value);
+            const hariDiinginkan = document.getElementById('hariDiinginkan').value.trim();
             const jamDiinginkan = document.getElementById('jamDiinginkan').value;
             const paketDipilih = document.getElementById('paketDipilih').value;
             const catatan = document.getElementById('catatan').value.trim();
 
-            if (!ortuNama || !ortuWa || !ortuAlamat || !anakNama || !anakGender || !anakUsia || !preferensiEl || !jamDiinginkan || !paketDipilih) {
+            if (!ortuNama || !ortuWa || !ortuAlamat || !anakNama || !anakGender || !anakUsia || !preferensiEl || !hariDiinginkan || !jamDiinginkan || !paketDipilih) {
                 alert('Mohon lengkapi semua data yang wajib diisi!');
                 return;
             }
@@ -1634,7 +1626,7 @@
             message += `%0A*--- Kebutuhan Belajar ---*%0A`;
             message += `${kebutuhan.length ? encodeURIComponent(kebutuhan.join(', ')) : '-'}%0A`;
             message += `%0A*Preferensi Pengajar:* ${encodeURIComponent(preferensiEl.value)}%0A`;
-            message += `*Hari Diinginkan:* ${hari.length ? encodeURIComponent(hari.join(', ')) : '-'}%0A`;
+            message += `*Hari Diinginkan:* ${hariDiinginkan ? encodeURIComponent(hariDiinginkan) : '-'}%0A`;
             message += `*Jam Diinginkan:* ${encodeURIComponent(jamDiinginkan)}%0A`;
             message += `*Paket Dipilih:* ${encodeURIComponent(paketDipilih)}%0A`;
             if (catatan) message += `*Catatan:* ${encodeURIComponent(catatan)}%0A`;
