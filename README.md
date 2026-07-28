@@ -1459,9 +1459,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="jamDiinginkan">Jam yang Diinginkan</label>
-                        <select id="jamDiinginkan" required>
-                            <option value="">Pilih waktu</option>
                             <option value="Pagi (08.00-11.00)">Pagi (08.00&ndash;11.00)</option>
                             <option value="Siang (11.00-15.00)">Siang (11.00&ndash;15.00)</option>
                             <option value="Sore (15.00-18.00)">Sore (15.00&ndash;18.00)</option>
