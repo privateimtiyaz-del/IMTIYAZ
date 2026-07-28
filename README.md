@@ -826,7 +826,6 @@
     <nav>
         <a href="#home" class="logo-nav">
             <img src="logo-imtiyaz.png" alt="Logo IMTIYAZ">
-            <span>IMTI<em>YAZ</em></span>
         </a>
         <a href="#daftar" class="nav-daftar">Daftar</a>
     </nav>
