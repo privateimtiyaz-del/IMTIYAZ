@@ -1251,7 +1251,7 @@
                         <span class="acc-title">Apakah ada biaya pendaftaran?</span>
                         <i class="fas fa-chevron-down acc-arrow"></i>
                     </button>
-                    <div class="acc-body"><p>Tidak ada biaya pendaftaran, orang tua hanya membayar sesuai paket yang dipilih.</p></div>
+                    <div class="acc-body"><p>Biaya pendaftaran hanya dikenakan satu kali dengan nominal yang sangat terjangkau untuk proses administrasi dan penempatan pengajar.</p></div>
                 </div>
                 <div class="acc-item">
                     <button class="acc-header" onclick="toggleAcc(this)">
