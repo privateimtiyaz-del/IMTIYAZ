@@ -55,7 +55,7 @@
             background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(12px);
             z-index: 100;
-            padding: 0.7rem 1.2rem;
+            padding: 0.9rem 1.2rem 1.6rem;
             border-bottom: 1px solid rgba(0, 0, 0, 0.07);
             display: flex;
             justify-content: space-between;
@@ -160,7 +160,7 @@
 
         /* ===== HERO ===== */
         .hero {
-            padding-top: 4.5rem;
+            padding-top: 5.3rem;
             padding-bottom: 2rem;
             background: linear-gradient(160deg, #f8f3e8 0%, #fff 100%);
             padding-left: 1.2rem;
@@ -826,6 +826,7 @@
     <nav>
         <a href="#home" class="logo-nav">
             <img src="logo-imtiyaz.png" alt="Logo IMTIYAZ">
+            <span>IMTI<em>YAZ</em></span>
         </a>
         <a href="#daftar" class="nav-daftar">Daftar</a>
     </nav>
@@ -1455,7 +1456,19 @@
                             <label class="check-option"><input type="checkbox" name="hari" value="Sabtu"> Sabtu</label>
                             <label class="check-option"><input type="checkbox" name="hari" value="Minggu"> Minggu</label>
                         </div>
-    
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="jamDiinginkan">Jam yang Diinginkan</label>
+                        <select id="jamDiinginkan" required>
+                            <option value="">Pilih waktu</option>
+                            <option value="Pagi (08.00-11.00)">Pagi (08.00&ndash;11.00)</option>
+                            <option value="Siang (11.00-15.00)">Siang (11.00&ndash;15.00)</option>
+                            <option value="Sore (15.00-18.00)">Sore (15.00&ndash;18.00)</option>
+                            <option value="Malam (18.00-21.00)">Malam (18.00&ndash;21.00)</option>
+                        </select>
+                    </div>
+
                     <div class="form-section-label"><i class="fas fa-box"></i> Paket yang Dipilih</div>
                     <div class="form-group">
                         <select id="paketDipilih" required>
@@ -1475,7 +1488,11 @@
                     <button type="submit" class="btn-wa">
                         <i class="fab fa-whatsapp"></i> Daftar Sekarang
                     </button>
-               
+                </form>
+            </div>
+        </div>
+    </section>
+
     <div class="section-divider"></div>
 
     <!-- KONTAK & LOKASI -->
