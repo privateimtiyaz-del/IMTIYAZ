@@ -1455,18 +1455,13 @@
                             <label class="check-option"><input type="checkbox" name="hari" value="Jumat"> Jumat</label>
                             <label class="check-option"><input type="checkbox" name="hari" value="Sabtu"> Sabtu</label>
                             <label class="check-option"><input type="checkbox" name="hari" value="Minggu"> Minggu</label>
+                            <label class="check-option"><input type="checkbox" name="hari" value="Fleksibel/Kapan saja"> Fleksibel/Kapan saja</label>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label" for="jamDiinginkan">Jam yang Diinginkan</label>
-                        <select id="jamDiinginkan" required>
-                            <option value="">Pilih waktu</option>
-                            <option value="Pagi (08.00-11.00)">Pagi (08.00&ndash;11.00)</option>
-                            <option value="Siang (11.00-15.00)">Siang (11.00&ndash;15.00)</option>
-                            <option value="Sore (15.00-18.00)">Sore (15.00&ndash;18.00)</option>
-                            <option value="Malam (18.00-21.00)">Malam (18.00&ndash;21.00)</option>
-                        </select>
+                        <input type="text" id="jamDiinginkan" placeholder="Contoh: 16.00 - 17.30 atau malam sekitar jam 8" required>
                     </div>
 
                     <div class="form-section-label"><i class="fas fa-box"></i> Paket yang Dipilih</div>
