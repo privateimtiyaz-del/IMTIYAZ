@@ -296,70 +296,7 @@
         .feature-card h3 { font-size: 0.85rem; margin-bottom: 0.25rem; }
         .feature-card p { font-size: 0.72rem; color: var(--text-light); line-height: 1.4; }
 
-        /* ===== ACCORDION GENERIC (Program List, FAQ) ===== */
-        #program-list { background: var(--bg-light); }
-
-        .acc-list { display: flex; flex-direction: column; gap: 0.7rem; }
-
-        .acc-item {
-            background: white;
-            border-radius: 16px;
-            border: 1px solid rgba(0,0,0,0.06);
-            overflow: hidden;
-        }
-
-        .acc-header {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.9rem 1rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-family: inherit;
-        }
-
-        .acc-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            background: rgba(15, 92, 92, 0.08);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
-        .acc-header span.acc-title {
-            flex: 1;
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .acc-header i.acc-arrow {
-            color: var(--primary);
-            transition: transform 0.25s ease;
-            flex-shrink: 0;
-        }
-
-        .acc-item.open .acc-arrow { transform: rotate(180deg); }
-
-        .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .acc-item.open .acc-body { max-height: 400px; }
-
-        .acc-body p {
-            padding: 0 1rem 1rem 3.6rem;
-            font-size: 0.78rem;
-            color: var(--text-light);
-            line-height: 1.5;
-        }
-
-        /* ===== PAKET & HARGA ===== */
+        /* ===== PROGRAM & HARGA (GABUNGAN) ===== */
         #harga { background: white; }
 
         .price-item {
@@ -404,8 +341,17 @@
         .price-item.open .price-arrow { transform: rotate(180deg); }
 
         .price-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .price-item.open .price-body { max-height: 1000px; }
+        .price-item.open .price-body { max-height: 1200px; }
         .price-body-inner { padding: 0 1.1rem 1.1rem; }
+
+        .price-desc {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.55;
+            margin-bottom: 0.9rem;
+            padding-bottom: 0.9rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
 
         .price-table-scroll {
             overflow-x: auto;
@@ -483,11 +429,71 @@
         .step-content h3 { font-size: 0.92rem; margin-bottom: 0.25rem; }
         .step-content p { font-size: 0.8rem; color: var(--text-light); line-height: 1.5; }
 
-        /* ===== FAQ ===== */
-        #faq { background: white; }
+        /* ===== FAQ (accordion generik) ===== */
+        #faq { background: var(--bg-light); }
+
+        .acc-list { display: flex; flex-direction: column; gap: 0.7rem; }
+
+        .acc-item {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .acc-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.9rem 1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .acc-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(15, 92, 92, 0.08);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .acc-header span.acc-title {
+            flex: 1;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .acc-header i.acc-arrow {
+            color: var(--primary);
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .acc-item.open .acc-arrow { transform: rotate(180deg); }
+
+        .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .acc-item.open .acc-body { max-height: 400px; }
+
+        .acc-body p {
+            padding: 0 1rem 1rem 3.6rem;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
 
         /* ===== TESTIMONI ===== */
-        #testimoni { background: var(--bg-light); }
+        #testimoni { background: white; }
 
         .testimonials-scroll {
             display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem;
@@ -496,7 +502,7 @@
         .testimonials-scroll::-webkit-scrollbar { display: none; }
 
         .testimonial-card {
-            background: white; padding: 1.3rem; border-radius: 20px;
+            background: var(--bg-light); padding: 1.3rem; border-radius: 20px;
             box-shadow: var(--shadow-sm); min-width: 270px; flex-shrink: 0;
         }
 
@@ -519,7 +525,7 @@
         .author-role { font-size: 0.75rem; color: var(--text-light); }
 
         /* ===== DOKUMENTASI ===== */
-        #dokumentasi { background: white; }
+        #dokumentasi { background: var(--bg-light); }
 
         .doc-grid {
             display: grid;
@@ -544,10 +550,10 @@
         .doc-placeholder span { font-size: 0.68rem; color: var(--text-light); text-align: center; padding: 0 0.5rem; }
 
         /* ===== TENTANG IMTIYAZ ===== */
-        #tentang { background: var(--bg-light); }
+        #tentang { background: white; }
 
         .tentang-card {
-            background: white;
+            background: var(--bg-light);
             border-radius: 18px;
             border: 1px solid rgba(0,0,0,0.06);
             padding: 1.2rem;
@@ -572,10 +578,10 @@
         .tentang-card ul { padding-left: 1.1rem; }
 
         /* ===== FORM PENDAFTARAN ===== */
-        #daftar { background: white; }
+        #daftar { background: var(--bg-light); }
 
         .form-card {
-            background: var(--bg-light);
+            background: white;
             padding: 1.4rem 1.2rem;
             border-radius: 24px;
             border: 1px solid rgba(0,0,0,0.06);
@@ -615,7 +621,7 @@
             font-family: inherit;
             font-size: 0.92rem;
             transition: all 0.2s;
-            background: white;
+            background: var(--bg-light);
             color: var(--text);
             -webkit-appearance: none;
         }
@@ -640,7 +646,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            background: white;
+            background: var(--bg-light);
             border: 1.5px solid #e2e8f0;
             border-radius: 12px;
             padding: 0.6rem 0.7rem;
@@ -660,7 +666,7 @@
             display: flex;
             align-items: center;
             gap: 0.4rem;
-            background: white;
+            background: var(--bg-light);
             border: 1.5px solid #e2e8f0;
             border-radius: 100px;
             padding: 0.5rem 0.9rem;
@@ -734,10 +740,10 @@
         }
 
         /* ===== KONTAK & LOKASI ===== */
-        #kontak { background: var(--bg-light); }
+        #kontak { background: white; }
 
         .kontak-card {
-            background: white;
+            background: var(--bg-light);
             border-radius: 18px;
             border: 1px solid rgba(0,0,0,0.06);
             overflow: hidden;
@@ -844,7 +850,7 @@
         </ul>
         <div class="hero-buttons">
             <a href="#daftar" class="btn btn-primary">✅ Daftar Sekarang</a>
-            <a href="#harga" class="btn btn-outline">✅ Lihat Paket</a>
+            <a href="#harga" class="btn btn-outline">✅ Lihat Program & Paket</a>
         </div>
         <div class="hero-stats">
             <div class="stat"><div class="stat-number">500+</div><div class="stat-label">Siswa</div></div>
@@ -897,103 +903,11 @@
 
     <div class="section-divider"></div>
 
-    <!-- 3. PROGRAM YANG TERSEDIA -->
-    <section id="program-list">
-        <div class="container">
-            <h2 class="section-title">Program yang <span>Tersedia</span></h2>
-            <p class="section-subtitle">Ketuk salah satu program untuk lihat penjelasan</p>
-            <div class="acc-list">
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-book-quran"></i></div>
-                        <span class="acc-title">Privat Mengaji</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Belajar membaca Al-Qur'an dari dasar (Iqra) hingga Al-Qur'an, dibimbing langsung oleh pengajar berpengalaman.</p>
-                    </div>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-microphone-lines"></i></div>
-                        <span class="acc-title">Tahsin</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Memperbaiki bacaan Al-Qur'an sesuai kaidah tajwid dan makhraj huruf yang benar.</p>
-                    </div>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-brain"></i></div>
-                        <span class="acc-title">Tahfidz</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Program menghafal Al-Qur'an dengan metode muraja'ah dan bimbingan hafalan bertahap.</p>
-                    </div>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-pen"></i></div>
-                        <span class="acc-title">Calistung</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Belajar membaca, menulis, dan berhitung untuk anak usia dini.</p>
-                    </div>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-mosque"></i></div>
-                        <span class="acc-title">Bahasa Arab</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Belajar nahwu, sharaf, dan percakapan bahasa Arab sehari-hari.</p>
-                    </div>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-calculator"></i></div>
-                        <span class="acc-title">Matematika</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Bimbingan matematika sesuai kurikulum sekolah, dari dasar hingga lanjutan.</p>
-                    </div>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-globe"></i></div>
-                        <span class="acc-title">Bahasa Inggris</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Belajar speaking, grammar, dan persiapan ujian bahasa Inggris.</p>
-                    </div>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-header" onclick="toggleAcc(this)">
-                        <div class="acc-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <span class="acc-title">Semua Mata Pelajaran Sekolah</span>
-                        <i class="fas fa-chevron-down acc-arrow"></i>
-                    </button>
-                    <div class="acc-body">
-                        <p>Bimbingan untuk semua mata pelajaran SD, SMP, dan SMA sesuai kebutuhan siswa.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- 4. PAKET & HARGA -->
+    <!-- 3+4. PROGRAM & HARGA (GABUNGAN) -->
     <section id="harga">
         <div class="container">
-            <h2 class="section-title">Paket <span>& Harga</span></h2>
-            <p class="section-subtitle">Ketuk tiap kategori untuk lihat rincian paket & harga</p>
+            <h2 class="section-title">Program <span>& Harga</span></h2>
+            <p class="section-subtitle">Ketuk tiap kategori untuk lihat penjelasan program & rincian harga</p>
             <div class="programs-grid">
 
                 <div class="price-item">
@@ -1007,6 +921,7 @@
                     </button>
                     <div class="price-body">
                         <div class="price-body-inner">
+                            <p class="price-desc"><strong>Privat Mengaji:</strong> belajar membaca Al-Qur'an dari dasar (Iqra) hingga Al-Qur'an, dibimbing langsung oleh pengajar berpengalaman. <strong>Calistung:</strong> belajar membaca, menulis, dan berhitung untuk anak usia dini.</p>
                             <div class="price-table-scroll">
                                 <table class="price-table">
                                     <thead><tr><th>Paket</th><th>Calistung & Iqra<br>1 jam</th><th>Calistung & Iqra<br>1&frac12; jam</th></tr></thead>
@@ -1033,6 +948,7 @@
                     </button>
                     <div class="price-body">
                         <div class="price-body-inner">
+                            <p class="price-desc"><strong>Tahsin:</strong> memperbaiki bacaan Al-Qur'an sesuai kaidah tajwid dan makhraj huruf yang benar. <strong>Tahfidz:</strong> program menghafal Al-Qur'an dengan metode muraja'ah dan bimbingan hafalan bertahap.</p>
                             <div class="price-table-scroll">
                                 <table class="price-table">
                                     <thead><tr><th>Paket</th><th>Tahfiz & Tahsin<br>1 jam</th><th>Tahfiz & Tahsin<br>1&frac12; jam</th></tr></thead>
@@ -1059,6 +975,7 @@
                     </button>
                     <div class="price-body">
                         <div class="price-body-inner">
+                            <p class="price-desc"><strong>Bahasa Arab:</strong> belajar nahwu, sharaf, dan percakapan bahasa Arab sehari-hari. <strong>Bahasa Inggris:</strong> belajar speaking, grammar, dan persiapan ujian bahasa Inggris.</p>
                             <div class="price-table-scroll">
                                 <table class="price-table">
                                     <thead><tr><th>Paket</th><th>TK/SD</th><th>SMP</th><th>SMA</th></tr></thead>
@@ -1086,6 +1003,7 @@
                     </button>
                     <div class="price-body">
                         <div class="price-body-inner">
+                            <p class="price-desc"><strong>Matematika:</strong> bimbingan matematika sesuai kurikulum sekolah, dari dasar hingga lanjutan. <strong>Semua Mata Pelajaran Sekolah:</strong> bimbingan untuk semua mata pelajaran SD, SMP, dan SMA sesuai kebutuhan siswa.</p>
                             <div class="price-table-scroll">
                                 <table class="price-table">
                                     <thead><tr><th>Paket</th><th>SD<br>(Kelas 1-3)</th><th>SD<br>(Kelas 4-6)</th><th>SMP</th><th>SMA</th></tr></thead>
@@ -1113,6 +1031,7 @@
                     </button>
                     <div class="price-body">
                         <div class="price-body-inner">
+                            <p class="price-desc">Belajar seni membaca Al-Qur'an dengan lagu (nagham) secara berkelompok, cocok untuk melatih keindahan bacaan bersama teman-teman sebaya.</p>
                             <div class="price-table-scroll">
                                 <table class="price-table">
                                     <thead><tr><th>Paket</th><th>Tilawah (3&ndash;5 Murid)</th></tr></thead>
@@ -1138,6 +1057,7 @@
                     </button>
                     <div class="price-body">
                         <div class="price-body-inner">
+                            <p class="price-desc">Pendampingan belajar khusus untuk anak berkebutuhan khusus (ABK), baik melalui shadow teacher pendamping di sekolah maupun privat khusus di rumah dengan metode yang disesuaikan.</p>
                             <div class="price-table-scroll">
                                 <table class="price-table">
                                     <thead><tr><th>Spesial</th><th>Detail</th></tr></thead>
@@ -1521,8 +1441,7 @@
         </div>
         <p class="footer-tagline">Quranic & Academic Tutoring · Banda Aceh</p>
         <div class="footer-links-row">
-            <a href="#program-list">Program</a>
-            <a href="#harga">Harga</a>
+            <a href="#harga">Program & Harga</a>
             <a href="#faq">FAQ</a>
             <a href="#kontak">Kontak</a>
         </div>
@@ -1537,8 +1456,7 @@
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
         <a href="#home" class="active"><i class="fas fa-home"></i><span>Beranda</span></a>
-        <a href="#program-list"><i class="fas fa-book-open"></i><span>Program</span></a>
-        <a href="#harga"><i class="fas fa-tags"></i><span>Harga</span></a>
+        <a href="#harga"><i class="fas fa-tags"></i><span>Program & Harga</span></a>
         <a href="#daftar"><i class="fas fa-user-plus"></i><span>Daftar</span></a>
         <a href="#kontak"><i class="fas fa-map-marker-alt"></i><span>Kontak</span></a>
     </div>
@@ -1555,7 +1473,7 @@
     </div>
 
     <script>
-        // Toggle accordion generik (Program List & FAQ)
+        // Toggle accordion generik (FAQ)
         function toggleAcc(headerEl) {
             const item = headerEl.closest('.acc-item');
             const wasOpen = item.classList.contains('open');
@@ -1563,7 +1481,7 @@
             if (!wasOpen) item.classList.add('open');
         }
 
-        // Toggle accordion daftar harga
+        // Toggle accordion Program & Harga
         function togglePrice(headerEl) {
             const item = headerEl.closest('.price-item');
             const wasOpen = item.classList.contains('open');
