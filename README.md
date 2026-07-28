@@ -1475,11 +1475,7 @@
                     <button type="submit" class="btn-wa">
                         <i class="fab fa-whatsapp"></i> Daftar Sekarang
                     </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
+               
     <div class="section-divider"></div>
 
     <!-- KONTAK & LOKASI -->
