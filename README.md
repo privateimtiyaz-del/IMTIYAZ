@@ -1455,16 +1455,7 @@
                             <label class="check-option"><input type="checkbox" name="hari" value="Sabtu"> Sabtu</label>
                             <label class="check-option"><input type="checkbox" name="hari" value="Minggu"> Minggu</label>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                            <option value="Pagi (08.00-11.00)">Pagi (08.00&ndash;11.00)</option>
-                            <option value="Siang (11.00-15.00)">Siang (11.00&ndash;15.00)</option>
-                            <option value="Sore (15.00-18.00)">Sore (15.00&ndash;18.00)</option>
-                            <option value="Malam (18.00-21.00)">Malam (18.00&ndash;21.00)</option>
-                        </select>
-                    </div>
-
+    
                     <div class="form-section-label"><i class="fas fa-box"></i> Paket yang Dipilih</div>
                     <div class="form-group">
                         <select id="paketDipilih" required>
