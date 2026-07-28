@@ -1487,7 +1487,6 @@
         <div class="container">
             <h2 class="section-title">Kontak <span>& Lokasi</span></h2>
             <div class="kontak-card">
-                <iframe class="kontak-map" src="https://maps.google.com/maps?q=Banda%20Aceh&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
                 <div class="kontak-info">
                     <a href="tel:+6285373842629" class="kontak-row">
                         <div class="kontak-icon"><i class="fas fa-phone"></i></div>
@@ -1501,9 +1500,13 @@
                         <div class="kontak-icon"><i class="fas fa-envelope"></i></div>
                         <div><div class="kontak-label">Email</div><div class="kontak-value">privateimtiyaz@gmail.com</div></div>
                     </a>
+                    <a href="https://instagram.com/imtiyaz.private" target="_blank" class="kontak-row">
+                        <div class="kontak-icon"><i class="fab fa-instagram"></i></div>
+                        <div><div class="kontak-label">Instagram</div><div class="kontak-value">@imtiyaz.private</div></div>
+                    </a>
                     <div class="kontak-row">
                         <div class="kontak-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div><div class="kontak-label">Lokasi</div><div class="kontak-value">Banda Aceh, Aceh</div></div>
+                        <div><div class="kontak-label">Alamat Kantor</div><div class="kontak-value">Jl. Prada Utama, Lamgugob, Kec. Syiah Kuala, Banda Aceh 24415</div></div>
                     </div>
                 </div>
             </div>
